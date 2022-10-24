@@ -16,11 +16,12 @@ const App =() =>{
       <Accordion titleValue={"First example"} collapsed={true}/>
       <Accordion titleValue={"Second example"} collapsed={false}/>
       Article 2
+      <Rating value={0}/>
+      <Rating value={1}/>
+      <Rating value={2}/>
       <Rating value={3}/>
       <Rating value={4}/>
       <Rating value={5}/>
-      <Rating value={1}/>
-      <Rating value={0}/>
     </div>
   )
 }
