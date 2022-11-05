@@ -20,6 +20,8 @@ const App =() =>{
         <UncontroledRating/>
         <UncontroledAccordion titleValue={"Menu"}/>
         <UncontroledAccordion titleValue={"Users"}/>
+        <Rating value={3}/>
+        <Accordion titleValue={"First example"} collapsed={false}/>
 
       {/*<PageTitle title={"This is APP component"}/>*/}
       {/*<PageTitle title={"My friends"}/>*/}
@@ -30,7 +32,7 @@ const App =() =>{
 
       {/*<Rating value={1}/>*/}
       {/*<Rating value={2}/>*/}
-      {/*<Rating value={3}/>*/}
+
       {/*<Rating value={4}/>*/}
       {/*<Rating value={5}/>*/}
     </div>
