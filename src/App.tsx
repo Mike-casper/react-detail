@@ -20,7 +20,7 @@ const App =() =>{
         <UncontroledRating/>
         <UncontroledAccordion titleValue={"Menu"}/>
         <UncontroledAccordion titleValue={"Users"}/>
-        <Rating value={3}/>
+        {/*<Rating value={3}/>*/}
         <Accordion titleValue={"First example"} collapsed={false}/>
 
       {/*<PageTitle title={"This is APP component"}/>*/}
