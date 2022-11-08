@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 type OnoffPropsType={
-    // on:boolean
+    on:boolean
 }
 
 export function Onoff(props:OnoffPropsType){
