@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Accordion from './components/Accordion/Accordion';
-import { Rating} from './components/Rating/Rating';
+import { Rating, RatingValueType} from './components/Rating/Rating';
 import { Onoff } from './components/OnOff/Onoff';
 import UncontroledAccordion from "./components/Accordion/UncontroledAccordion";
 import { UncontroledRating } from './components/Rating/UncontroledRating';
@@ -12,16 +12,21 @@ import { UncontroledRating } from './components/Rating/UncontroledRating';
 
 const App =() =>{
   console.log("App rendering")
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(3);
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
   return(
     <div>
+        <Rating value={ratingValue}
+                onClick={setRatingValue}/>
         {/*<Onoff/>*/}
         {/*<Onoff/>*/}
 
         <UncontroledRating/>
-        <UncontroledAccordion titleValue={"Menu"}/>
+        {/*<UncontroledAccordion titleValue={"Menu"}/>*/}
         <UncontroledAccordion titleValue={"Users"}/>
-        {/*<Rating value={3}/>*/}
-        <Accordion titleValue={"First example"} collapsed={false}/>
+        <Accordion titleValue={"First example"}
+                   collapsed={accordionCollapsed}
+        onClick={(collapsed)=>setAccordionCollapsed(!accordionCollapsed)}/>
 
       {/*<PageTitle title={"This is APP component"}/>*/}
       {/*<PageTitle title={"My friends"}/>*/}
