@@ -1,4 +1,10 @@
 import React, {useState} from "react";
+import {
+    ControledInputWithValue,
+    GetValueOfUncontroledInputByButtonPress,
+    TrackValueOfUncontroledInput,
+    UncontroledInput
+} from "../input/Input";
 
 type OnoffPropsType={
     onChange:(on:boolean)=>void
@@ -45,7 +51,14 @@ export function UncontroledOnoff(props:OnoffPropsType){
         <div style={onStyle} onClick={onClicked}>On</div>
         <div style={offStyle} onClick={offClicked}>Off</div>
         <div style={indicateStyle}></div>
+        <div>
+            <UncontroledInput/>
+            <ControledInputWithValue/>
+            <TrackValueOfUncontroledInput/>
+            <GetValueOfUncontroledInputByButtonPress/>
+        </div>
     </div>
+
 }
 //
 //
