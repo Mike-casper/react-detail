@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {
-    ControledInputWithValue,
+    ControledInput,
+    ControledInputWithValue, ControlledCheckbox, ControlledSelect,
     GetValueOfUncontroledInputByButtonPress,
     TrackValueOfUncontroledInput,
     UncontroledInput
@@ -56,6 +57,9 @@ export function UncontroledOnoff(props:OnoffPropsType){
             <ControledInputWithValue/>
             <TrackValueOfUncontroledInput/>
             <GetValueOfUncontroledInputByButtonPress/>
+            <ControledInput/>
+            <ControlledCheckbox/>
+            <ControlledSelect/>
         </div>
     </div>
 

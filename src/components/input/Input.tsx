@@ -16,7 +16,37 @@ export const TrackValueOfUncontroledInput = () => {
         <input onChange={onChange}/> - {value}
     </>;
 }
-// kolesnayavika
+export const ControledInput=()=>{
+    const [parentValue, setParentValue] = useState("")
+    debugger
+    const onChange=(e:ChangeEvent<HTMLInputElement>)=> {
+        debugger
+        setParentValue(e.currentTarget.value)
+    }
+    return <input value={parentValue} onChange={onChange}/>
+}
+
+export const ControlledCheckbox=()=>{
+const [parentValue, setParentValue] = useState(true)
+    const onChange = (e:ChangeEvent<HTMLInputElement>)=> {
+        setParentValue(e.currentTarget.checked)
+    }
+    return <input type="checkbox" checked={parentValue} onChange={onChange}/>
+}
+
+export const ControlledSelect=()=>{
+const [parentValue, setParentValue] = useState <string|undefined>(undefined);
+// const [parentValue, setParentValue] = useState <string|undefined>("2");
+    const onChange = (e:ChangeEvent<HTMLSelectElement>)=>{
+    setParentValue(e.currentTarget.value)
+    }
+    return <select value={parentValue} onChange={onChange}>
+        <option>none</option>
+        <option value={"1"}>Kiev</option>
+        <option value={"2"}>Minsk</option>
+        <option value={"3"}>Moscow</option>
+    </select>
+}
 // export const GetValueOfUncontroledInputByButtonPress = () => {
 //     const [value, setValue] = useState("");
 //     return <>
@@ -25,7 +55,7 @@ export const TrackValueOfUncontroledInput = () => {
 //             setValue(el.value);
 //         }}>Save</button> - actual value: {value}
 //     </>;
-// } нарушает принципы React 12 видео
+// } нарушает принципы React - 12 видео
 
 export const GetValueOfUncontroledInputByButtonPress = () => {
     const [value, setValue] = useState("");
